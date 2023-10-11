@@ -10,26 +10,19 @@ use App\Jobs\SendOTPJob;
 class OTPController extends Controller
 {
     public function sendotp(Request $request){
+        //send data job
         $otp = str_pad(random_int(0, 99999), 5, '0', STR_PAD_LEFT);
         $email=$request->email;
-        
         SendOTPJob::dispatch($otp, $email);
-        // Mail::send('welcome', ['otp' => $otp], function ($message) use ($request) {
-        //     $message->to($request->email)
-        //     ->subject('Your OTP');
-        // });
-
         $request->session()->put('otp', $otp);
-
         return redirect('/otpcheck');
-
-
-
-    }
+   }
     public function otpcheck(){
+        //otp check blade
         return view('otpcheck');
     }
     public function otpverify(Request $request){
+        //otp verification and some logic
         $inputOTP = $request->otp;
         $storedOTP = $request->session()->get('otp');
         $attempts = session('otp_attempts', 0);

@@ -21,15 +21,11 @@ class SendOTPJob implements ShouldQueue
     }
 
     public function handle()
-
     {
-        
-        
-        
+    
             Mail::send('welcome', ['otp' => $this->otp], function ($message) {
                 $message->to($this->email)->subject('Your OTP');
             });
-        
-            
+           
     }
 }

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Form</title>
+    <title>laravel_otp</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
     <div class="min-h-screen flex items-center justify-center">
         <div class="bg-white p-8 rounded-lg shadow-md w-80">
-            <h2 class="text-2xl font-semibold mb-4">Subscribe to Our Newsletter</h2>
+            <h2 class="text-2xl font-semibold mb-4">Subscribe</h2>
             <form onsubmit="return validateEmail();" action="{{ route('sendotp') }}" method="post">
                 @csrf
                 <div class="mb-4">

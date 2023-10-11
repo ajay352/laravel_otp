@@ -23,7 +23,7 @@
         <p>Here is your OTP for secure access: <strong>{{$otp}}</strong></p>
         <p>Please use this OTP within the next 15 minutes to verify your account.</p>
         <p>If you didn't request this OTP, please contact our support team.</p>
-        <a href="https://example.com/verify-otp">Click here to verify</a>
+        <a href="https://linkedin.com/in/ajay-sahar-a48552223">Click here to verify</a>
     </div>
 </body>
 </html>
